@@ -7,11 +7,14 @@
 // Static variables
 SDL_Window*   WINDOW   = NULL;
 SDL_Renderer* RENDERER = NULL;
+uint8_t* MAP           = NULL;
+int MAP_WIDTH          = -1;
+int MAP_HEIGHT         = -1;
 
 // Forward declarations
 
 // Engine variables
-const char*   TITLE          = "3D Graphics Programming From Scratch.";
+const char*   TITLE          = "SeaMap-Trade.";
 bool          ENGINE_RUNNING = false;
 
 // Camera stuff
@@ -36,13 +39,8 @@ void setup(void) {
       WINDOW_HEIGHT
   );
 
-  // Some tutorial setup
-  // row 10 column 20 to color blue
-  // This array is row first
-  // pixel format = A R G B
-  // COLOR_BUFFER[(WINDOW_WIDTH * 10) + 20] = 0xFF0000FF;
-
-  // Setting up cube of points
+  // Setting up map
+  MAP = (uint8_t*) malloc(sizeof(uint8_t) * MAP_WIDTH * MAP_HEIGHT);
 }
 
 void process_input(void) {
@@ -66,7 +64,8 @@ void update(void) {
 void render(void) {
   // Projection?
   // TEST
-  render_rectangle(20, 20, 100, 100, PURPLE);
+  // render_rectangle(20, 20, 100, 100, MAGENTA);
+  render_map();
 
   // Final render of the collor buffer
   render_color_buffer();
@@ -85,13 +84,16 @@ int main(int argc, char* argv[])
   (void)argv;
 
   // DEBUG
-  printf("MAP_LAYER.WATER: %u", MAP_LAYER.WATER);
+  // MAP_LAYER water = WATER;
+  // printf("MAP_LAYER.WATER: %u\n", water);
 
   ENGINE_RUNNING = initialize_window();
 
-  // Main engine loop
+  // Initializing map
+  init_map_size(WINDOW_WIDTH, WINDOW_HEIGHT);
   setup();
 
+  // Main engine loop
   while (ENGINE_RUNNING) {
     process_input();
     update();

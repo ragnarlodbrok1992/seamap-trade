@@ -10,6 +10,8 @@ win_all: src/main.c
 		/I$(SDL2INC) \
 		/Feseamap-trader.exe \
 		src/display.c \
+		src/map_generator.c \
+		src/color.c \
 		src/main.c \
 		shell32.lib \
 		User32.lib \

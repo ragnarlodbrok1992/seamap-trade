@@ -7,15 +7,15 @@
 
 // Colors with alpha channel
 // It's ARGB?
-uint32_t WHITE = 0xFFFFFFFF;
-uint32_t BLACK = 0xFF000000;
+extern uint32_t WHITE;
+extern uint32_t BLACK;
 
-uint32_t RED     = 0xFFFF0000;
-uint32_t GREEN   = 0xFF00FF00;
-uint32_t BLUE    = 0xFF0000FF;
-uint32_t CYAN    = 0xFF00FFFF;
-uint32_t MAGENTA = 0xFFFF00FF;
-uint32_t YELLOW  = 0xFFFFFF00;
+extern uint32_t RED;
+extern uint32_t GREEN;
+extern uint32_t BLUE;
+extern uint32_t CYAN;
+extern uint32_t MAGENTA;
+extern uint32_t YELLOW;
 
 #endif /* _H_COLOR */
 
