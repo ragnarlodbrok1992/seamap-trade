@@ -1,0 +1,17 @@
+# Windows compilation stuff
+
+*.exe
+*.ilk
+*.pdb
+*.dll
+*.obj
+
+# My scripts
+vcvars.bat
+
+# RemedyBG stuff
+*.rdbg
+
+# CTags
+tags
+
