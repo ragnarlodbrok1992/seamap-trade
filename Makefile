@@ -13,8 +13,10 @@ win_all: src/main.c
 		src/map_generator.c \
 		src/color.c \
 		src/main.c \
+		src/win_rand.c \
 		shell32.lib \
 		User32.lib \
+		Advapi32.lib \
 		/link /LIBPATH:"$(SDL2LIB)" \
 					SDL2.lib SDL2main.lib
 

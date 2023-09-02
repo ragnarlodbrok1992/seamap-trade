@@ -9,6 +9,10 @@
 #define MAP_Y 100
 #define MAP_UI_BORDER_X 100
 #define MAP_UI_BORDER_Y 100
+#define MAP_LANDSTRIP_MAX 74
+#define MAP_LANDSTRIP_MIN 10
+
+#define set_map_terrain(a, b, type) map[(MAP_WIDTH * b) + a] = type
 
 typedef enum MAP_LAYER_e {
   WATER,
