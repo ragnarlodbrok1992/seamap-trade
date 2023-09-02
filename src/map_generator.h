@@ -22,7 +22,7 @@ extern int MAP_WIDTH;
 
 void init_map_size(int screen_width, int screen_height);
 void init_map(uint8_t* map);
-void generate_map(uint8_t map);
+void generate_map(uint8_t* map);
 void render_map();
 
 #endif /* _H_MAP_GENERATOR */

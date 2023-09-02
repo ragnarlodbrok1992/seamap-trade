@@ -41,6 +41,10 @@ void setup(void) {
 
   // Setting up map
   MAP = (uint8_t*) malloc(sizeof(uint8_t) * MAP_WIDTH * MAP_HEIGHT);
+
+  // Initializing map
+  init_map(MAP);
+  generate_map(MAP);
 }
 
 void process_input(void) {

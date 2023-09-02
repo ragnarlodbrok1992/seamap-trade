@@ -16,7 +16,7 @@ void init_map(uint8_t* map) {
   }
 }
 
-void generate_map(uint8_t map) {
+void generate_map(uint8_t* map) {
   // TODO: implement map generation!
 
 }
@@ -35,7 +35,7 @@ void render_map() {
             draw_pixel(MAP_X + x_temp, MAP_Y + y_temp, BLUE);
           break;
         case GRASS:
-            draw_pixel(MAP_X + x_temp, MAP_Y + y_temp, GRASS);
+            draw_pixel(MAP_X + x_temp, MAP_Y + y_temp, GREEN);
           break;
         default:
           break;
