@@ -3,6 +3,7 @@
 #include "utility.h"
 #include "color.h"
 #include "map_generator.h"
+#include "draw.h"
 
 // Static variables
 SDL_Window*   WINDOW   = NULL;
@@ -69,7 +70,13 @@ void render(void) {
   // Projection?
   // TEST
   // render_rectangle(20, 20, 100, 100, MAGENTA);
-  render_map();
+  // render_map();
+
+  // TEST - line drawing
+  vec2_t start1 = {100, 100};
+  vec2_t end1   = {200, 200};
+
+  draw_line(MAP, start1, end1, WHITE);
 
   // Final render of the collor buffer
   render_color_buffer();

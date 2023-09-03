@@ -9,6 +9,7 @@ win_all: src/main.c
 		/EHsc \
 		/I$(SDL2INC) \
 		/Feseamap-trader.exe \
+		src/draw.c \
 		src/display.c \
 		src/map_generator.c \
 		src/color.c \
